@@ -1,5 +1,5 @@
-import config from './config.js';
-
+const config = require('../config');
+const {cmd , commands} = require('../command')
 const ping = async (m, sock) => {
   const prefix = config.PREFIX;
 const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
